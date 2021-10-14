@@ -1,0 +1,44 @@
+<header>
+  <h1 class="heading">
+    <a href="/blogs">
+      MY BLOG
+    </a>
+  </h1>
+  <div class="social">
+    <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+
+<!-- main-visual用のdiv -->
+<div class="main-visual">
+  <div class="main-visual-content">
+    <p class="main-visual-text"  class="TextRandomAnime">
+      The world is a book<br />
+      and those who do not travel<br />
+      read only one page.
+    </p>
+  </div>
+</div>
+
+
+  <section class="single-blog">
+    <h2 class="blog-heading">Comment</h2>
+    <section class="blog-box">
+      <div class="main posts-show">
+        <div class="container">
+          <div class="posts-show-item">
+            <p><%= @comment.content%></p>
+          </div>
+          <div class="post-menus">
+            <%= link_to("削除", "/comments/#{@comment.id}/destroy", {method: "post"}) %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+<footer>
+  <p class="footer-text">There is always light behind the clouds.</p>
+</footer>

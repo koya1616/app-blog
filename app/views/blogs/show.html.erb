@@ -1,0 +1,75 @@
+<header>
+  <h1 class="heading">
+    <%= link_to "MY BLOG", blogs_path %>
+  </h1>
+  <div class="social">
+    <i class="fa fa-facebook-square"></i>
+    <i class="fa fa-twitter-square"></i>
+    <i class="fa fa-instagram"></i>
+  </div>
+</header>
+
+<div class="main-visual">
+  <div class="main-visual-content">
+    <p class="main-visual-text">
+      The world is a book<br>
+      and those who do not travel<br>
+      read only one page.
+    </p>
+  </div>
+</div>
+
+<main>
+  <section class="single-blog">
+    <h2 class="blog-heading">Blog</h2>
+    
+    <section class="blog-box">
+      
+      <h3 class="blog-box-heading">
+        <%= @blog.title %>
+      </h3>
+      
+      <div class="blog-box-content">
+        <p class="category">
+          <%= @blog.category %>
+        </p>
+        <p class="blog-date">
+          <%= @blog.created_at %>
+        </p>
+      </div>
+      
+      <p class="single-text">
+        <%= @blog.body %>
+      </p>
+      
+      <!--Flexbox使用-->
+      <div class="flexbox">
+        <!--<div>%= link_to "編集", edit_blog_path(@blog) %></div>-->
+        <!--<div>%= link_to "削除", blog_path(@blog), method: :delete %></div>-->
+        <div><a href="/comments/new">コメントする</a></div>
+        <div><a href="/comments/index">コメント一覧</a></div>
+      </div>
+      
+
+      <div class="author-case">
+        
+        <div class="author-image"></div>
+        <div class="author-box">
+          <p class="author-name">By 青山煌矢 / student</p>
+          <p class="author-text">
+            名古屋外国語大学　外国語学部英米語学科　３年<br>
+            エンジニアをめざす学生<br>
+            プログラミングスクールや長期インターンシップでスキル・知識・経験を高めている。<br>
+            IT社会で活躍したい！<br>
+          </p>
+        </div>
+        
+      </div>
+    </section>
+    
+  </section>
+</main>
+
+<footer>
+  <p class="footer-text">There is always light behind the clouds.</p>
+</footer>

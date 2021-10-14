@@ -1,0 +1,55 @@
+<header>
+  <h1 class="heading">
+    <a href="/blogs">
+      MY BLOG
+    </a>
+  </h1>
+  <div class="social">
+    <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+
+<!-- main-visual用のdiv -->
+<div class="main-visual">
+  <div class="main-visual-content">
+    <p class="main-visual-text"  class="TextRandomAnime">
+      The world is a book<br />
+      and those who do not travel<br />
+      read only one page.
+    </p>
+  </div>
+</div>
+
+
+
+  <section class="single-blog">
+    <h2 class="blog-heading">Comment</h2>
+    <section class="blog-box">
+      <div class="main posts-show">
+        <div class="container">
+           <div class="main posts-new">
+            <div class="container">
+              <h1 class="form-heading">コメントする</h1>
+              <%= form_tag("/comments/create") do %>
+              <div class="form">
+                <div class="form-body">
+                  <textarea name="content"></textarea>
+                  <input type="submit" value="投稿">
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+
+
+<footer>
+  <p class="footer-text">There is always light behind the clouds.</p>
+</footer>

@@ -1,0 +1,76 @@
+
+
+<body>
+<!-- header -->
+<header>
+  <h1 class="heading">
+    <a href="/blogs">
+      MY BLOG
+    </a>
+  </h1>
+  <div class="social">
+    <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
+    <a href="https://www.instagram.com/?hl=ja"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+
+<!-- main-visual用のdiv -->
+<div class="main-visual">
+  <div class="main-visual-content">
+    <p class="main-visual-text"  class="TextRandomAnime">
+      The world is a book<br />
+      and those who do not travel<br />
+      read only one page.
+    </p>
+  </div>
+</div>
+
+<!-- main -->
+<main>
+  <section class="blog">
+    <h2 class="blog-heading">Recent Blogs</h2>
+    <div class="blog-box">
+      <% @blogs.each do |blog| %>
+        <div class="blog-item">
+          <section class="blog-text">
+            <h3 class="blog-text-heading"><%= link_to blog.title, blog_path(blog) %></h3>
+            <p class="blog-date"><%= blog.created_at %></p>
+            <span class="category"><%= blog.category %></span>
+            <p class="single-text"><%= blog.body %></p>
+          </section>
+        </div>
+      <% end %>
+      <div class="pagination">
+        <p><<</p>
+        <p><</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>></p>
+        <p>>></p>
+      </div>
+    </div>  
+    
+    <div class="author-case">
+      <div class="author-image"></div>
+      <div class="author-box">
+        <p class="author-name">By 青山煌矢 / student</p>
+        <p class="author-text">
+          名古屋外国語大学　外国語学部英米語学科　３年<br>
+          エンジニアをめざす学生<br>
+          プログラミングスクールや長期インターンシップでスキル・知識・経験を高めている。<br>
+          IT社会で活躍したい！<br>
+        </p>
+      </div>
+    </div>
+    
+  </section>
+</main>
+
+<!-- footer -->
+<footer>
+  <p class="footer-text">There is always light behind the clouds.</p>
+</footer>
+ 
+</body>
